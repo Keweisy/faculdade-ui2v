@@ -10,7 +10,7 @@ export const ALUNOS = [
     { id: 9, nome: 'Mariana Costa', idade: 19, curso: 'Pedagogia' },
     { id: 10, nome: 'João Victor', idade: 21, curso: 'Contabilidade' },
     { id: 11, nome: 'Tatiane Mendes', idade: 23, curso: 'Administração' },
-    { id: 12, nome: 'Gabriel Fernandes', idade: 20, curso: 'Análise e Desenvolvimento de Sistemas' },
+    { id: 12, nome: 'Gabriel Fernandes', idade: 20, curso: 'ADS' },
     { id: 13, nome: 'Larissa Pereira', idade: 22, curso: 'Medicina Veterinária' },
     { id: 14, nome: 'Roberto Lima', idade: 25, curso: 'Engenharia Elétrica' },
     { id: 15, nome: 'Bruna Ribeiro', idade: 21, curso: 'Jornalismo' },
