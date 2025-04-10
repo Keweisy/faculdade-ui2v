@@ -1,0 +1,23 @@
+export const ALUNOS = [
+    { id: 1, nome: 'Ana Souza', idade: 20, curso: 'Engenharia' },
+    { id: 2, nome: 'Carlos Oliveira', idade: 22, curso: 'Administração' },
+    { id: 3, nome: 'Beatriz Lima', idade: 19, curso: 'Direito' },
+    { id: 4, nome: 'Diego Martins', idade: 23, curso: 'Sistemas de Informação' },
+    { id: 5, nome: 'Fernanda Silva', idade: 21, curso: 'Psicologia' },
+    { id: 6, nome: 'Lucas Almeida', idade: 20, curso: 'Engenharia Civil' },
+    { id: 7, nome: 'Juliana Rocha', idade: 24, curso: 'Arquitetura' },
+    { id: 8, nome: 'Ricardo Santos', idade: 22, curso: 'Marketing' },
+    { id: 9, nome: 'Mariana Costa', idade: 19, curso: 'Pedagogia' },
+    { id: 10, nome: 'João Victor', idade: 21, curso: 'Contabilidade' },
+    { id: 11, nome: 'Tatiane Mendes', idade: 23, curso: 'Administração' },
+    { id: 12, nome: 'Gabriel Fernandes', idade: 20, curso: 'Análise e Desenvolvimento de Sistemas' },
+    { id: 13, nome: 'Larissa Pereira', idade: 22, curso: 'Medicina Veterinária' },
+    { id: 14, nome: 'Roberto Lima', idade: 25, curso: 'Engenharia Elétrica' },
+    { id: 15, nome: 'Bruna Ribeiro', idade: 21, curso: 'Jornalismo' },
+    { id: 16, nome: 'Felipe Azevedo', idade: 24, curso: 'Educação Física' },
+    { id: 17, nome: 'Patrícia Gomes', idade: 22, curso: 'Biomedicina' },
+    { id: 18, nome: 'Renato Lopes', idade: 20, curso: 'Física' },
+    { id: 19, nome: 'Isabela Fernandes', idade: 19, curso: 'Letras' },
+    { id: 20, nome: 'Thiago Nunes', idade: 23, curso: 'História' },
+  ];
+  
