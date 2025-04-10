@@ -1,9 +1,9 @@
-<p-card header="Cadastro de Aluno">
+<p-card header="Cadastro de Aluno" class="p-card-form">
   <div class="flex flex-wrap col-12 mb-3">
     <button
       pButton
       type="button"
-      class="p-button p-button-raised"
+      class="p-button p-button-raised p-button-secondary"
       icon="pi pi-caret-left"
       pTooltip="Voltar"
       tooltipPosition="top"
@@ -13,43 +13,154 @@
   </div>
 
   <form #form="ngForm" autocomplete="off" (ngSubmit)="cadastrar()">
-    <div class="grid">
-      <span class="col-12 mb-2">Nome</span>
-      <div class="col-12 md:col-6 lg:col-4">
+    <div class="p-grid p-fluid">
+      
+      <!-- Nome Completo -->
+      <div class="p-field p-col-12 p-md-6 p-lg-4">
+        <label for="nome" class="p-d-block">Nome Completo</label>
         <input
           pInputText
+          id="nome"
           name="nome"
           [(ngModel)]="aluno.nome"
           required
           type="text"
+          class="p-inputtext-lg"
+          placeholder="Digite o nome completo"
         />
       </div>
 
-      <span class="col-12 mb-2 mt-3">Idade</span>
-      <div class="col-12 md:col-3 lg:col-2">
+      <!-- Idade -->
+      <div class="p-field p-col-12 p-md-4 p-lg-3">
+        <label for="idade" class="p-d-block">Idade</label>
         <input
           pInputText
+          id="idade"
           name="idade"
           [(ngModel)]="aluno.idade"
           required
           type="number"
+          class="p-inputtext-lg"
+          placeholder="Digite a idade"
         />
       </div>
 
-      <span class="col-12 mb-2 mt-3">Curso</span>
-      <div class="col-12 md:col-6 lg:col-4">
+      <!-- Curso -->
+      <div class="p-field p-col-12 p-md-6 p-lg-4">
+        <label for="curso" class="p-d-block">Curso</label>
         <input
           pInputText
+          id="curso"
           name="curso"
           [(ngModel)]="aluno.curso"
           required
           type="text"
+          class="p-inputtext-lg"
+          placeholder="Digite o curso"
         />
       </div>
 
-      <div class="col-12 mt-4">
-        <button pButton type="submit" label="Salvar"></button>
+      <!-- Botão Salvar -->
+      <div class="p-col-12 mt-4">
+        <button pButton type="submit" label="Salvar" class="p-button-lg p-button-success"></button>
       </div>
     </div>
   </form>
 </p-card>
+
+<style>
+  /* Cartão */
+  .p-card-form {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+
+  .p-card .p-card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-bottom: none;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+  }
+
+  /* Títulos dos campos */
+  .p-field label {
+    font-size: 1rem;
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Estilo do input */
+  .p-inputtext-lg {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .p-inputtext-lg:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+
+  /* Estilo dos botões */
+  .p-button-lg {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .p-button-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+
+  .p-button-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+
+  .p-button-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .p-button-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+
+  /* Ajustes de layout */
+  .p-col-12 {
+    margin-bottom: 1rem;
+  }
+
+  .mt-4 {
+    margin-top: 2rem;
+  }
+
+  /* Espaçamento entre os campos */
+  .p-field {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Estilo para o tooltip */
+  .p-tooltip {
+    background-color: #333;
+    color: #fff;
+  }
+</style>

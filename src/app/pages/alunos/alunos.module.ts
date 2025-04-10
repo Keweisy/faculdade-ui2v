@@ -14,6 +14,7 @@ import { PrimengModule } from 'src/app/primeng.module';
     AlunosCadastroComponent
   ],
   imports: [
+    
     CommonModule,
     FormsModule,
     AlunosRoutingModule,
