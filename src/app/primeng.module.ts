@@ -6,7 +6,6 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {TableModule} from 'primeng/table';
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
-import { InputText } from 'primevue/inputtext';
 import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ export class PrimengModule { }
 
 @NgModule({
   imports: [
-    InputText,
     CommonModule
   ],
   declarations: [LoginComponent]
