@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PrimengModule } from './primeng.module';
 import { DisciplinaModule } from './pages/disciplina/disciplina.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent
   ],
   imports: [
-    
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,

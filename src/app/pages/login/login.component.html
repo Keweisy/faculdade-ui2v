@@ -1,31 +1,23 @@
-<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-700">
-  <div class="bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-xl w-full max-w-md text-center border border-white/20">
-    <h2 class="text-4xl font-bold mb-10 text-white">Welcome</h2>
+<input
+  type="text"
+  [(ngModel)]="email"
+  placeholder="Email"
+  class="w-full p-4 mb-4 bg-white/10 placeholder-white/60 text-white rounded-full outline-none focus:ring-2 focus:ring-white/50"
+/>
 
-    <div class="mb-5">
-      <input
-        type="text"
-        placeholder="Email"
-        class="w-full p-4 bg-white/10 placeholder-white/60 text-white rounded-full outline-none focus:ring-2 focus:ring-white/40 transition duration-300"
-      />
-    </div>
+<input
+  type="password"
+  [(ngModel)]="senha"
+  placeholder="Password"
+  class="w-full p-4 mb-6 bg-white/10 placeholder-white/60 text-white rounded-full outline-none focus:ring-2 focus:ring-white/50"
+/>
 
-    <div class="mb-8">
-      <input
-        type="password"
-        placeholder="Password"
-        class="w-full p-4 bg-white/10 placeholder-white/60 text-white rounded-full outline-none focus:ring-2 focus:ring-white/40 transition duration-300"
-      />
-    </div>
+<button
+  class="w-full py-3 bg-white/20 hover:bg-white/30 active:bg-white/10 text-white font-semibold rounded-full transition duration-200 shadow-sm"
+  (click)="entrar()"
+>
+  Sign In
+</button>
 
-    <button
-      class="w-full py-3 bg-white/20 hover:bg-white/30 active:bg-white/10 text-white font-semibold rounded-full transition duration-200 shadow-sm"
-    >
-      Sign In
-    </button>
-
-    <a href="#" class="block mt-5 text-sm font-medium text-white/80 hover:underline transition">
-      Forgot Password?
-    </a>
-  </div>
-</div>
+<!-- Mensagem de erro -->
+<p *ngIf="erro" class="mt-4 text-red-300 font-medium">{{ erro }}</p>

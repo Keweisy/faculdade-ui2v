@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component'; // Ajuste se necessário
+import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guards/auth.guard'; // Adicione o guard (a gente vai criar já já)
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
   {
     path: 'disciplinas',
-    loadChildren: () => import('./pages/disciplina/disciplina.module').then(m => m.DisciplinaModule)
+    loadChildren: () => import('./pages/disciplina/disciplina.module').then(m => m.DisciplinaModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'alunos',
-    loadChildren: () => import('./pages/alunos/alunos.module').then(m => m.AlunosModule)
+    loadChildren: () => import('./pages/alunos/alunos.module').then(m => m.AlunosModule),
+    canActivate: [AuthGuard]
   },
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, // redireciona raiz para login
-  { path: '**', redirectTo: 'login' } // rota coringa
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
