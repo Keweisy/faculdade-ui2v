@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // <- Adicione isso
 
 import { LoginComponent } from './login.component';
-import { PrimengModule } from 'src/app/primeng.module'; // Caminho corrigido
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    PrimengModule
+    FormsModule, // <- E aqui também
+    RouterModule
   ]
 })
 export class LoginModule {}
