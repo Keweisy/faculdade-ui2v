@@ -1,26 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms'; // Importado para ngModel
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PrimengModule } from './primeng.module';
-import { DisciplinaModule } from './pages/disciplina/disciplina.module';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    PrimengModule,
     AppRoutingModule,
-    DisciplinaModule
+    FormsModule // Adicionado aqui
   ],
   providers: [],
   bootstrap: [AppComponent]
