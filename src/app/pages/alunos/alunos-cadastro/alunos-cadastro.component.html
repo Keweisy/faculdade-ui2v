@@ -1,8 +1,8 @@
 <p-card header="Cadastro de Aluno" class="p-card-form">
-  <div class="flex flex-wrap col-12">
+  <div class="p-field p-col-12 p-md-6 p-lg-4">
     <button pButton type="button" class="p-button p-button-raided" 
     icon="pi pi-caret-left" pTooltip="Voltar" tooltipPosition="top" label="Voltar"
-     routerLink="/Alunos"></button>
+     routerLink="/alunos"></button>
   </div>
 
   <form #form="ngForm" autocomplete="off" (ngSubmit)="cadastrar()">
@@ -62,31 +62,11 @@
 </p-card>
 
 <style>
-  /* Cartão */
-  .p-card-form {
-    max-width: 650px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 2rem;
-  }
-
-  .p-card .p-card-header {
-    background-color: #007bff;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: bold;
-    border-bottom: none;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px 8px 0 0;
-  }
-
+ 
   /* Títulos dos campos */
   .p-field label {
     font-size: 1rem;
-    color: #495057;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
@@ -118,12 +98,12 @@
   }
 
   .p-button-secondary {
-    background-color: #6c757d;
+    background-color: #ffffff;
     border-color: #6c757d;
   }
 
   .p-button-secondary:hover {
-    background-color: #5a6268;
+    background-color: #ffffff;
     border-color: #545b62;
   }
 
