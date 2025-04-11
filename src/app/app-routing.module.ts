@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-// const routes: Routes = [
-// {
-//   path: 'disciplina',
-//   loadChildren: () =>
-//     import('./pages/disciplina/disciplina.module').then((m) => m.DisciplinaModule)
-// }
-// ];
+import { LoginComponent } from './pages/login/login.component'; // Ajuste se necessário
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+
   {
     path: 'disciplinas',
     loadChildren: () => import('./pages/disciplina/disciplina.module').then(m => m.DisciplinaModule)
@@ -18,12 +13,13 @@ const routes: Routes = [
     path: 'alunos',
     loadChildren: () => import('./pages/alunos/alunos.module').then(m => m.AlunosModule)
   },
-  { path: '', redirectTo: 'disciplinas', pathMatch: 'full' },
-  { path: '**', redirectTo: 'disciplinas' }
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // redireciona raiz para login
+  { path: '**', redirectTo: 'login' } // rota coringa
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

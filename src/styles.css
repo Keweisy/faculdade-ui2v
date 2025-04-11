@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: var(--font-family, 'Segoe UI', sans-serif);
+    background: linear-gradient(-225deg, #009688, #00796B 48%, #004D40); /* gradiente bonito e moderno */
+    color: #fff; /* texto branco para contraste */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

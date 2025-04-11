@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
+
+import { LoginComponent } from './login.component';
+import { PrimengModule } from 'src/app/primeng.module'; // Caminho corrigido
 
 @NgModule({
   declarations: [LoginComponent],
@@ -10,7 +12,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    PrimengModule
   ]
 })
 export class LoginModule {}
