@@ -1,4 +1,11 @@
-<input
+
+
+<div
+        class="px-6 py-20 md:px-12 lg:px-20 flex items-center justify-center bg-[linear-gradient(-225deg,var(--p-primary-500),var(--p-primary-700)_48%,var(--p-primary-800))] dark:bg-[linear-gradient(-225deg,var(--p-primary-400),var(--p-primary-600)_48%,var(--p-primary-800))]"
+    >
+        <div class="p-12 shadow text-center lg:w-[30rem] backdrop-blur-md rounded-xl bg-[rgba(255,255,255,0.1)]">
+            <div class="text-4xl font-medium mb-12 text-primary-contrast">Welcome</div>
+            <input
   type="text"
   [(ngModel)]="email"
   placeholder="Email"
@@ -21,3 +28,11 @@
 
 <!-- Mensagem de erro -->
 <p *ngIf="erro" class="mt-4 text-red-300 font-medium">{{ erro }}</p>
+          
+            <a class="cursor-pointer font-medium block text-center text-primary-contrast">Forgot Password?</a>
+        </div>
+    </div>
+
+
+
+

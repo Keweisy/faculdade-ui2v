@@ -19,7 +19,7 @@ export class LoginComponent{
       localStorage.setItem('auth', 'true'); // salva login no localStorage
       this.router.navigate(['/alunos']); // redireciona
     } else {
-      this.erro = 'Email ou senha inválidos'; // mensagem de erro
+      this.erro = 'Email ou senha inválidos, Email:admin Senha:12345'; // mensagem de erro
     }
   }
 }
